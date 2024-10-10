@@ -1,0 +1,20 @@
+{
+    "id": "pollreport",
+    "name": "Poll Report",
+    "description": "Allows admin to easily view and export as CSV the votes from the Polls module.",
+    "keywords": ["poll", "report"],
+    "version": "0.2",
+    "humhub": {
+        "minVersion": "1.12"
+    },
+    "homepage": "https://github.com/Yeromnis/humhub-pollreport",
+    "authors": [
+        {
+            "name": "Yeromnis",
+            "homepage" : "https://yeromnis.com"
+        }
+    ],
+    "screenshots": [
+        "assets/screen1.PNG"
+    ]
+}
