@@ -49,40 +49,13 @@ class Module extends ContentContainerModule
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function disable()
-    {
-        foreach (Poll::find()->all() as $poll) {
-            $poll->delete();
-        }
 
-        parent::disable();
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function disableContentContainer(ContentContainerActiveRecord $container)
-    {
-        foreach (Poll::find()->contentContainer($container)->all() as $poll) {
-            $poll->delete();
-        }
-
-        parent::disableContentContainer($container);
-    }
 
     /**
      * @inheritdoc
      */
     public function getPermissions($contentContainer = null)
     {
-        if ($contentContainer) {
-            return [
-                new permissions\CreatePoll()
-            ];
-        }
 
         return [];
     }
